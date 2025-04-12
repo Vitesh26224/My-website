@@ -124,6 +124,7 @@ body{
     width: 100%;
     height: 220px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .card-content{
@@ -482,59 +483,6 @@ footer {
   color: white;
 }
 
-@media screen and (max-width: 992px) {
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-text, .about-img {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    
-    .navbar {
-        position: relative;
-        padding-right: 60px;
-    }
-    
-    .nav {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: rgb(14, 14, 14);
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        z-index: 999;
-    }
-    
-    .nav.active {
-        transform: translateY(0);
-    }
-    
-    .nav li {
-        margin: 15px 0;
-    }
-    
-    .hero {
-        padding: 100px 20px;
-    }
-    
-    .collection-card {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .footer-section {
-        min-width: 100%;
-    }
-}
-
 @media screen and (max-width: 576px) {
     .LOGO {
         font-size: 1.2rem;
@@ -564,3 +512,37 @@ footer {
         display: block;
     }
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #222;
+      padding: 1rem 0;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav li {
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav.active {
+      display: flex;
+    }
+  }
