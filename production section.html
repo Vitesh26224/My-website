@@ -11,6 +11,7 @@
     <!-- navigation bar -->
     <nav class = "navbar">
         <a href = "https://www.titan.co.in/shop/bestsellers?utm_source=google&utm_medium=cpc&utm_campaign=MS_Titan_Google_Brand-search_TitanwatchesOpenTargeting2_Exact_Perf_010720&utm_content=20738754177&gad_source=1&gclid=EAIaIQobChMIpcH9yfe2jAMVTxuDAx272CjIEAAYASAAEgIX5vD_BwE&start=96&sz=24" class = "LOGO">LUXURY TITAN WATCH</a>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <ul class = "nav">
             <li><a href ="index.html">Home</a></li>
             <li><a href ="production section.html">Bestseller</a></li>
@@ -20,6 +21,15 @@
             <li><a href ="contect.html">Contact</a></li>
         </ul>
      </nav>
+
+     <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector(".nav"); // select by class
+
+        menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        });
+    </script>
 
     <section class="product-section">
         <h1 class="section-title">Bestseller</h1>
